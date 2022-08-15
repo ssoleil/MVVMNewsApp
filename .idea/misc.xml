@@ -4,7 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/drawable/ic_all_news.xml" value="0.1385" />
-        <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/layout/activity_main.xml" value="0.1693840579710145" />
+        <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/layout/fragment_article.xml" value="0.1693840579710145" />
+        <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/layout/fragment_breaking_news.xml" value="0.1693840579710145" />
+        <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/layout/fragment_saved_news.xml" value="0.1693840579710145" />
+        <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/layout/fragment_search.xml" value="0.1693840579710145" />
+        <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/layout/item_article.xml" value="0.1693840579710145" />
+        <entry key="..\:/AndroidStudioProjects/MVVMNewsApp/app/src/main/res/layout/item_article_preview.xml" value="0.43896713615023475" />
       </map>
     </option>
   </component>
