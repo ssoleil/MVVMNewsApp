@@ -1,11 +1,15 @@
 package com.example.mvvmnewsapp.adapters
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.mvvmnewsapp.Article
+import com.example.mvvmnewsapp.R
+import kotlinx.android.synthetic.main.item_article.view.*
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsAdapterHolder>() {
 
@@ -24,14 +28,27 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsAdapterHolder>() {
     val differ = AsyncListDiffer(this, diffCallback)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsAdapterHolder {
-        TODO("Not yet implemented")
+        return NewsAdapterHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.fragment_article,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: NewsAdapterHolder, position: Int) {
-        TODO("Not yet implemented")
+        val article = differ.currentList[position]
+        holder.itemView.apply {
+            Glide.with(this).load(article.urlToImage).into(ivArticle)
+            tvArticleSource.text = article.source.name
+            tvArticleTitle.text = article.title
+            tvArticlePublishedAt.text = article.publishedAt
+            tvArticleDescription.text = article.description
+        }
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return differ.currentList.size
     }
 }
