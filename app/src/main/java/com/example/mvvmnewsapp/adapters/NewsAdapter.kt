@@ -45,10 +45,19 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsAdapterHolder>() {
             tvArticleTitle.text = article.title
             tvArticlePublishedAt.text = article.publishedAt
             tvArticleDescription.text = article.description
+            setOnClickListener {
+                onItemClickListener?.let { it(article) }
+            }
         }
     }
 
     override fun getItemCount(): Int {
         return differ.currentList.size
+    }
+
+    private var onItemClickListener : ((Article) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (Article) -> Unit) {
+        onItemClickListener = listener
     }
 }
